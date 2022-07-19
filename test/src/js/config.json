@@ -1,0 +1,123 @@
+{
+    "i_form": {
+        "value": "テスト申込",
+        "fixed": true
+    },
+    "i_last_name": {
+        "rules": [ "required", "max:30" ],
+        "messages": { "required": "お名前を入力してください", "max": "お名前は:max文字以内で入力してください" },
+        "autokana": { "to": "i_last_kana", "katakana": true },
+        "exclude": true
+    },
+    "i_first_name": {
+        "rules": [ "required", "max:30" ],
+        "messages": { "required": "お名前を入力してください", "max": "お名前は:max文字以内で入力してください" },
+        "autokana": { "to": "i_first_kana", "katakana": true },
+        "exclude": true
+    },
+    "i_full_name": {
+        "mixed": {
+            "mix": ["i_last_name", "i_first_name"],
+            "join": "　"
+        }
+    },
+    "i_last_kana": {
+        "rules": [ "required", "max:30", "katakana" ],
+        "messages": { "required": "お名前を入力してください", "max": "お名前は:max文字以内で入力してください" },
+        "exclude": true
+    },
+    "i_first_kana": {
+        "rules": [ "required", "max:30", "katakana" ],
+        "messages": { "required": "お名前を入力してください", "max": "お名前は:max文字以内で入力してください" },
+        "exclude": true
+    },
+    "i_full_kana": {
+        "mixed": {
+            "mix": ["i_last_kana", "i_first_kana"],
+            "join": "　"
+        }
+    },
+    "i_tel": {
+        "rules": [ "required", "tel" ],
+        "messages": { "required": "電話番号を入力してください" }
+    },
+    "i_mail": {
+        "rules": [ "required", "max:50", "email" ],
+        "messages": { "required": "メールアドレスを入力してください", "max": "メールアドレスは:max文字以内で入力してください", "email": "メールアドレスの形式で入力してください" }
+    },
+    "i_mail_confirm": {
+        "rules": [ {"required_with": ["i_mail"]}, "max:50", "email", "same:i_mail" ],
+        "messages": { "required_with": "同じメールアドレスを入力してください", "max": "メールアドレスは::max文字以内で入力してください", "email": "メールアドレスの形式で入力してください", "same": "同じメールアドレスを入力してください" },
+        "exclude": true
+    },
+    "i_zip": {
+        "rules": [ "required", "zip" ],
+        "messages": { "required": "郵便番号を入力してください" }
+    },
+    "i_pref": {
+        "rules": [ "required", {"in":[
+            "北海道", "青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県", "茨城県", "栃木県", "群馬県", "埼玉県", "千葉県" ,
+            "東京都", "神奈川県", "新潟県", "富山県", "石川県", "福井県", "山梨県", "長野県", "岐阜県", "静岡県", "愛知県", "三重県" ,
+            "滋賀県", "京都府", "大阪府", "兵庫県", "奈良県", "和歌山県", "鳥取県", "島根県", "岡山県", "広島県", "山口県", "徳島県" ,
+            "香川県", "愛媛県", "高知県", "福岡県", "佐賀県", "長崎県", "熊本県", "大分県", "宮崎県", "鹿児島県", "沖縄県"
+        ]}],
+        "messages": { "required": "都道府県を選択してください" },
+        "join": true
+    },
+    "i_city": {
+        "rules": [ "required", "max:40" ],
+        "messages": { "required": "市区町村を入力してください", "max": "市区町村は:max文字以内で入力してください" }
+    },
+    "i_town": {
+        "rules": [ "required", "max:40" ],
+        "messages": { "required": "丁目・番地を入力してください", "max": "丁目・番地は:max文字以内で入力してください" }
+    },
+    "i_building": {
+        "rules": [ "max:50" ],
+        "messages": { "max": "建物名・部屋番号は:max文字以内で入力してください" }
+    },
+    "i_full_address": {
+        "mixed": {
+            "mix": ["i_pref", "i_city", "i_town", "i_building"],
+            "join": " "
+        }
+    },
+    "i_plan": {
+        "rules": [ "required", { "in": [ "プランA", "プランB", "プランC" ] } ],
+        "messages": { "required": "プランを選択してください" }
+    },
+    "i_day_of_week": {
+        "rules": [ {"in":["月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日", "日曜日"]} ],
+        "messages": { },
+        "exclude": true
+    },
+    "i_hour": {
+        "rules": [ {"in":["いつでも", "午前", "12時~13時", "13時~17時", "17時~19時", "19時~20時"]} ],
+        "messages": { },
+        "exclude": true
+    },
+    "i_timezone": {
+        "mixed": {
+            "mix": ["i_day_of_week", "i_hour"],
+            "join": "/"
+        }
+    },
+    "i_file": {
+        "rules": [ "acceptImg:jpeg|jpg|png", "filesize:5" ],
+        "messages": { "acceptImg": "画像はjpeg,jpg,png形式でアップロードして下さい", "filesize": "ファイルサイズは:filesizeMBまでです" },
+        "exclude": true
+    },
+    "i_message": {
+        "rules": [ "max:300" ],
+        "messages": { "max": "お問い合わせ内容は:max文字以内で入力してください" }
+    },
+    "i_agree": {
+        "rules": [ "required", {"in":["同意"]} ],
+        "messages": { "required": "同意が必要です" },
+        "exclude": true
+    },
+    "i_remarks": {
+        "rules": [ "max:300" ],
+        "messages": { "max": "備考欄は:max文字以内で入力してください" }
+    }
+}

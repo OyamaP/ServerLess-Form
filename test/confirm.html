@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Confirm</title>
+    <link rel="stylesheet" href="./dist/css/confirm.css">
+    <script src="./dist/js/confirm.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Test Form-Confirm</h1>
+    </header>
+
+    <main>
+        <div class="animation before-on-load">
+            <div class="sk-circle">
+                <div class="sk-circle1 sk-child"></div>
+                <div class="sk-circle2 sk-child"></div>
+                <div class="sk-circle3 sk-child"></div>
+                <div class="sk-circle4 sk-child"></div>
+                <div class="sk-circle5 sk-child"></div>
+                <div class="sk-circle6 sk-child"></div>
+                <div class="sk-circle7 sk-child"></div>
+                <div class="sk-circle8 sk-child"></div>
+                <div class="sk-circle9 sk-child"></div>
+                <div class="sk-circle10 sk-child"></div>
+                <div class="sk-circle11 sk-child"></div>
+                <div class="sk-circle12 sk-child"></div>
+            </div>
+        </div>
+
+        <div class="confirm_item">
+            <div class="item-label">お名前（漢字）</div>
+            <div class="item-value js-confirm_i_full_name"></div>
+        </div>
+
+        <div class="confirm_item">
+            <div class="item-label">お名前（フリガナ）</div>
+            <div class="item-value js-confirm_i_full_kana"></div>
+        </div>
+
+        <div class="confirm_item">
+            <div class="item-label">電話番号</div>
+            <div class="item-value js-confirm_i_tel"></div>
+        </div>
+
+        <div class="confirm_item">
+            <div class="item-label">メールアドレス</div>
+            <div class="item-value js-confirm_i_mail"></div>
+        </div>
+
+        <div class="confirm_item">
+            <div class="item-label">郵便番号</div>
+            <div class="item-value js-confirm_i_zip"></div>
+        </div>
+
+        <div class="confirm_item">
+            <div class="item-label">住所</div>
+            <div class="item-value js-confirm_i_full_address"></div>
+        </div>
+
+        <div class="confirm_item">
+            <div class="item-label">プラン</div>
+            <div class="item-value js-confirm_i_plan"></div>
+        </div>
+
+        <div class="confirm_item">
+            <div class="item-label">時間帯</div>
+            <div class="item-value js-confirm_i_timezone"></div>
+        </div>
+
+        <div class="confirm_item">
+            <div class="item-label">ファイルのアップロード</div>
+            <div class="item-value js-confirm_i_file"></div>
+        </div>
+
+        <div class="confirm_item">
+            <div class="item-label">メッセージ</div>
+            <div class="item-value js-confirm_i_message"></div>
+        </div>
+
+        <form id="form-test">
+            <div class="item-container">
+                <div class="item-group agree-box">
+                    <ul>
+                        <li>これはテストフォームです</li>
+                        <li>実際にデータを送信する機能は実装されていません</li>
+                    </ul>
+                    <label for="i_agree"><input type="checkbox" id="i_agree" name="i_agree" value="同意">上記に同意する</label>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require optional">任意</span><span class="item_name">追加備考欄</span></div>
+                <div class="item-value-area">
+                    <div class="item-group">
+                        <div class="item-wrap">
+                            <textarea name="i_remarks" class="i_remarks" placeholder="追加項目用テスト備考欄"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-box">
+                <button class="btn js-submit-btn" name="action" value="send" type="button">この内容で申し込む</button>
+                <button class="btn js-back-btn" name="action" value="ret" type="button">戻って内容を修正する</button>
+            </div>
+        </form>
+
+    </main>
+
+</body>
+</html>

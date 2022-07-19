@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Index</title>
+    <link rel="stylesheet" href="./dist/css/index.css">
+    <script src="./dist/js/index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Test Form-Index</h1>
+    </header>
+
+    <main>
+        <div class="animation before-on-load">
+            <div class="sk-circle">
+                <div class="sk-circle1 sk-child"></div>
+                <div class="sk-circle2 sk-child"></div>
+                <div class="sk-circle3 sk-child"></div>
+                <div class="sk-circle4 sk-child"></div>
+                <div class="sk-circle5 sk-child"></div>
+                <div class="sk-circle6 sk-child"></div>
+                <div class="sk-circle7 sk-child"></div>
+                <div class="sk-circle8 sk-child"></div>
+                <div class="sk-circle9 sk-child"></div>
+                <div class="sk-circle10 sk-child"></div>
+                <div class="sk-circle11 sk-child"></div>
+                <div class="sk-circle12 sk-child"></div>
+            </div>
+        </div>
+
+        <div id="debug_set_value"><span>自動入力ボタン</span></div>
+
+        <div class="form-error">
+            <div class="form-error-title">入力エラー</div>
+            <div class="form-error-text">入力エラーが1個あります</div>
+        </div>
+        <form id="form-test">
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require necessary">必須</span><span class="item_name">お名前（漢字）</span></div>
+                <div class="item-value-area">
+                    <div class="divide-box divide-two">
+                        <div class="item-group">
+                            <div class="item-wrap">
+                                <input type="text" class="i_last_name" id="i_last_name" name="i_last_name" placeholder="例：山田">
+                            </div>
+                        </div>
+                        <div class="item-group">
+                            <div class="item-wrap">
+                                <input type="text" class="i_first_name" id="i_first_name" name="i_first_name" placeholder="例：太郎">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require necessary">必須</span><span class="item_name">お名前（フリガナ）</span></div>
+                <div class="item-value-area">
+                    <div class="divide-box divide-two">
+                        <div class="item-group">
+                            <div class="item-wrap">
+                                <input type="text" class="i_last_kana" id="i_last_kana" name="i_last_kana" placeholder="例：ヤマダ">
+                            </div>
+                        </div>
+                        <div class="item-group">
+                            <div class="item-wrap">
+                                <input type="text" class="i_first_kana" id="i_first_kana" name="i_first_kana" placeholder="例：タロウ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require necessary">必須</span><span class="item_name">電話番号</span></div>
+                <div class="item-value-area">
+                    <div class="item-group">
+                        <div class="item-wrap">
+                            <input type="tel" class="i_tel" name="i_tel" placeholder="例：09012345678（ハイフンなし）">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require necessary">必須</span><span class="item_name">メールアドレス</span></div>
+                <div class="item-value-area">
+                    <div class="item-group">
+                        <div class="item-wrap">
+                            <input type="email" class="i_mail" name="i_mail" placeholder="例：sample@mail.jp">
+                        </div>
+                    </div>
+                    <div class="item-group">
+                        <p class="description">確認用にメールアドレスを再度入力してください。</p>
+                        <div class="item-wrap">
+                            <input type="email" class="i_mail_confirm" name="i_mail_confirm" placeholder="例：sample@mail.jp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require necessary">必須</span><span class="item_name">郵便番号</span></div>
+                <div class="item-value-area">
+                    <div class="item-group">
+                        <div class="item-wrap">
+                            <input type="text" class="i_zip p-postal-code" name="i_zip" placeholder="例：1234567">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require necessary">必須</span><span class="item_name">都道府県</span></div>
+                <div class="item-value-area">
+                    <div class="item-group">
+                        <div class="item-wrap">
+                            <select type="select-one" class="i_pref p-region" name="i_pref">
+                                <option selected="true" disabled="disabled">選択</option>
+                                <option value="北海道">北海道</option><option value="青森県">青森県</option><option value="岩手県">岩手県</option><option value="宮城県">宮城県</option><option value="秋田県">秋田県</option><option value="山形県">山形県</option><option value="福島県">福島県</option><option value="茨城県">茨城県</option><option value="栃木県">栃木県</option><option value="群馬県">群馬県</option><option value="埼玉県">埼玉県</option><option value="千葉県">千葉県</option><option value="東京都">東京都</option><option value="神奈川県">神奈川県</option><option value="新潟県">新潟県</option><option value="富山県">富山県</option><option value="石川県">石川県</option><option value="福井県">福井県</option><option value="山梨県">山梨県</option><option value="長野県">長野県</option><option value="岐阜県">岐阜県</option><option value="静岡県">静岡県</option><option value="愛知県">愛知県</option><option value="三重県">三重県</option><option value="滋賀県">滋賀県</option><option value="京都府">京都府</option><option value="大阪府">大阪府</option><option value="兵庫県">兵庫県</option><option value="奈良県">奈良県</option><option value="和歌山県">和歌山県</option><option value="鳥取県">鳥取県</option><option value="島根県">島根県</option><option value="岡山県">岡山県</option><option value="広島県">広島県</option><option value="山口県">山口県</option><option value="徳島県">徳島県</option><option value="香川県">香川県</option><option value="愛媛県">愛媛県</option><option value="高知県">高知県</option><option value="福岡県">福岡県</option><option value="佐賀県">佐賀県</option><option value="長崎県">長崎県</option><option value="熊本県">熊本県</option><option value="大分県">大分県</option><option value="宮崎県">宮崎県</option><option value="鹿児島県">鹿児島県</option><option value="沖縄県">沖縄県</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require necessary">必須</span><span class="item_name">市区町村</span></div>
+                <div class="item-value-area">
+                    <div class="item-group">
+                        <div class="item-wrap">
+                            <input type="text" class="i_city p-locality p-street" name="i_city" placeholder="例：〇〇市〇〇町">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require necessary">必須</span><span class="item_name">丁目・番地</span></div>
+                <div class="item-value-area">
+                    <div class="item-group">
+                        <div class="item-wrap">
+                            <input type="text" class="i_town" name="i_town" placeholder="例：〇〇丁目〇番地">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require optional">任意</span><span class="item_name">建物名・部屋番号など</span></div>
+                <div class="item-value-area">
+                    <div class="item-group">
+                        <div class="item-wrap">
+                            <input type="text" class="i_building" name="i_building" placeholder="例）マンション101号室">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require necessary">必須</span><span class="item_name">プラン</span></div>
+                <div class="item-value-area">
+                    <div class="item-group">
+                        <div class="divide-box divide-two">
+                            <div class="item-wrap">
+                                <input type="radio" class="i_plan" name="i_plan" id="i_plan_0" value="プランA">
+                                <label for="i_plan_0"><span>プランA</span></label>
+                            </div>
+                            <div class="item-wrap">
+                                <input type="radio" class="i_plan" name="i_plan" id="i_plan_1" value="プランB">
+                                <label for="i_plan_1"><span>プランB</span></label>
+                            </div>
+                            <div class="item-wrap">
+                                <input type="radio" class="i_plan" name="i_plan" id="i_plan_2" value="プランC">
+                                <label for="i_plan_2"><span>プランC</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require optional">任意</span><span class="item_name">日時</span></div>
+                <div class="item-value-area">
+                    <div class="item-group">
+                        <div class="divide-box divide-four">
+                            <div class="item-wrap">
+                                <label for="i_day_of_week_0" class="label-checkbox">
+                                    <input type="checkbox" class="i_day_of_week" name="i_day_of_week" id="i_day_of_week_0" value="月曜日">
+                                    <span>月曜日</span>
+                                </label>
+                            </div>
+                            <div class="item-wrap">
+                                <label for="i_day_of_week_1" class="label-checkbox">
+                                    <input type="checkbox" class="i_day_of_week" name="i_day_of_week" id="i_day_of_week_1" value="火曜日">
+                                    <span>火曜日</span>
+                                </label>
+                            </div>
+                            <div class="item-wrap">
+                                <label for="i_day_of_week_2" class="label-checkbox">
+                                    <input type="checkbox" class="i_day_of_week" name="i_day_of_week" id="i_day_of_week_2" value="水曜日">
+                                    <span>水曜日</span>
+                                </label>
+                            </div>
+                            <div class="item-wrap">
+                                <label for="i_day_of_week_3" class="label-checkbox">
+                                    <input type="checkbox" class="i_day_of_week" name="i_day_of_week" id="i_day_of_week_3" value="木曜日">
+                                    <span>木曜日</span>
+                                </label>
+                            </div>
+                            <div class="item-wrap">
+                                <label for="i_day_of_week_4" class="label-checkbox">
+                                    <input type="checkbox" class="i_day_of_week" name="i_day_of_week" id="i_day_of_week_4" value="金曜日">
+                                    <span>金曜日</span>
+                                </label>
+                            </div>
+                            <div class="item-wrap">
+                                <label for="i_day_of_week_5" class="label-checkbox">
+                                    <input type="checkbox" class="i_day_of_week" name="i_day_of_week" id="i_day_of_week_5" value="土曜日">
+                                    <span>土曜日</span>
+                                </label>
+                            </div>
+                            <div class="item-wrap">
+                                <label for="i_day_of_week_6" class="label-checkbox">
+                                    <input type="checkbox" class="i_day_of_week" name="i_day_of_week" id="i_day_of_week_6" value="日曜日">
+                                    <span>日曜日</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-group">
+                        <div class="item-wrap">
+                            <select type="select-one" class="i_hour" name="i_hour">
+                                <option selected="true" disabled="disabled">選択</option>
+                                <option value="いつでも">いつでも</option>
+                                <option value="午前">午前</option>
+                                <option value="12時~13時">12時~13時</option>
+                                <option value="13時~17時">13時~17時</option>
+                                <option value="17時~19時">17時~19時</option>
+                                <option value="19時~20時">19時~20時</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require optional">任意</span><span class="item_name">ファイルのアップロード</span></div>
+                <div class="item-value-area">
+                    <div class="item-group">
+                        <div class="item-wrap">
+                            <label for="i_file" class="label-file">
+                                <input id="i_file" type="file" class="i_file" name="i_file" placeholder="ファイルをアップロードする" accept="image/*" multiple>
+                                <span>ファイルをアップロードする</span>
+                            </label>
+                            <p class="description">※ アップロード可能なファイルサイズは1ファイルにつき最大5MB</p>
+                            <div class="i_file-prevArea"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="item-name-area"><span class="item_require optional">任意</span><span class="item_name">お問い合わせ内容</span></div>
+                <div class="item-value-area">
+                    <div class="item-group">
+                        <div class="item-wrap">
+                            <textarea name="i_message" class="i_message" placeholder="ご要望・ご質問がある場合は、こちらにご記入ください。"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="btn-box">
+                    <button class="btn js-submit-btn invalid-btn" type="button">未入力項目があります</button>
+                </div>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>
